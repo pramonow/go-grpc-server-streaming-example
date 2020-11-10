@@ -6,7 +6,7 @@ import (
 	"log"
 	"math/rand"
 
-	pb "github.com/pramonow/go-grpc-server-streaming/src/proto"
+	pb "github.com/pramonow/go-grpc-server-streaming-example/src/proto"
 
 	"time"
 
@@ -43,7 +43,7 @@ func main() {
 			if err != nil {
 				log.Fatalf("can not receive %v", err)
 			}
-			log.Printf("Resp received: ", resp.Result)
+			log.Printf("Resp received: %s", resp.Result)
 		}
 	}()
 
