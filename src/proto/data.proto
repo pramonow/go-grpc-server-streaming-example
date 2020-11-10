@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package protobuf;
+
+service StreamService {
+  rpc FetchResponse (Request) returns (stream Response) {}
+}
+
+message Request {
+  int32 id = 1;
+}
+
+message Response {
+  string result = 1;
+}
