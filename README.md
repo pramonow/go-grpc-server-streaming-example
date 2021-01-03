@@ -12,11 +12,15 @@ make all
 This will create the pb file for grpc and also the client and server binary.
 ---
 # Usage
-Run both server and client in different terminal
-You should run server first before client
+
+## Build Docker Image using docker compose
 ```
-./server
-./client
+docker-compose -f docker-compose.yml build
+```
+
+## Run up all docker containers using docker compose
+```
+docker-compose -f docker-compose.yml up
 ```
 
 This will be shown in client
