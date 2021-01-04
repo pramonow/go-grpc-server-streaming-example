@@ -1,0 +1,19 @@
+version: '2.0'
+services:
+  client:
+    build: ./src/client/.
+    volumes:
+      - ./src/client/:/app/
+    command: ./start.sh
+    depends_on:
+      - server
+    container_name: client
+  
+  server:
+    build: ./src/server/.
+    volumes:
+      - ./src/server/:/app/
+    ports:
+      - 50005:50005
+    command: ./start.sh
+    container_name: server
