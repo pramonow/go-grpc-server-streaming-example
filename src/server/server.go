@@ -7,7 +7,7 @@ import (
 	"sync"
 	"time"
 
-	pb "github.com/leonardyeoxl/go-grpc-server-streaming-example/src/proto"
+	pb "github.com/pramonow/go-grpc-server-streaming-example/src/proto"
 
 	"google.golang.org/grpc"
 )
