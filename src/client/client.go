@@ -17,7 +17,7 @@ func main() {
 	rand.Seed(time.Now().Unix())
 
 	// dail server
-	conn, err := grpc.Dial("server:50005", grpc.WithInsecure())
+	conn, err := grpc.Dial("localhost:50005", grpc.WithInsecure())
 	if err != nil {
 		log.Fatalf("can not connect with server %v", err)
 	}
