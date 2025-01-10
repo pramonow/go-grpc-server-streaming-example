@@ -16,7 +16,7 @@ import (
 func main() {
 	rand.Seed(time.Now().Unix())
 
-	// dail server
+	// dial server
 	conn, err := grpc.Dial("localhost:50005", grpc.WithInsecure())
 	if err != nil {
 		log.Fatalf("can not connect with server %v", err)
@@ -30,7 +30,6 @@ func main() {
 		log.Fatalf("openn stream error %v", err)
 	}
 
-	//ctx := stream.Context()
 	done := make(chan bool)
 
 	go func() {
